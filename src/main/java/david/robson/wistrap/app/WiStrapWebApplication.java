@@ -5,6 +5,8 @@ import org.apache.wicket.RuntimeConfigurationType;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 
+import david.robson.wistrap.app.home.HomePage;
+
 public class WiStrapWebApplication extends WebApplication
 {
 
@@ -22,6 +24,7 @@ public class WiStrapWebApplication extends WebApplication
 	{
 		super.init();
 			
+		getMarkupSettings().setStripWicketTags(true);
 		getComponentInstantiationListeners().add(new SpringComponentInjector(this));
 				
 		//new AnnotatedMountScanner().scanPackage("david.robson.wistrap.app.*").mount(this);
