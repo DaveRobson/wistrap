@@ -7,19 +7,26 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 
+/**
+ * Creates a new link to be added to the menu
+ * 
+ * @param menu
+ *            the menu to add the link to
+ * @return the link
+ */
 @SuppressWarnings("serial")
-public class ItemLink extends Panel
+public class ItemPageLink extends Panel
 {
-	public ItemLink(String id, final ListItem<MenuItem> item) 
+	public ItemPageLink(String id, final MenuItem item) 
 	{
 		super(id);
 		
 		setRenderBodyOnly(true);
 		
-		add(new Link<Class<? extends WebPage>>("pageLink", new Model<Class<? extends WebPage>>(item.getModelObject().getPage()))
+		add(new Link<Class<? extends WebPage>>("pageLink", new Model<Class<? extends WebPage>>(item.getPage()))
 		{
 			{
-				final Label label = new Label("linkName", item.getModelObject().getTitle());
+				final Label label = new Label("linkName", item.getTitle());
 				add(label);
 				label.setRenderBodyOnly(true);			
 			}

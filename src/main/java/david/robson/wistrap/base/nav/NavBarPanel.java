@@ -17,10 +17,7 @@ import org.apache.wicket.model.Model;
 
 @SuppressWarnings("serial")
 public class NavBarPanel extends Panel
-{
-	
-	private Class<? extends WebPage> parentWebPage;
-	
+{	
 	public NavBarPanel(String id, List<MenuItem> items, Class<? extends WebPage> parentWebPage)
 	{
 		this(id, items, null, parentWebPage);
@@ -58,51 +55,26 @@ public class NavBarPanel extends Panel
 			{
 				item.setModel(new CompoundPropertyModel<MenuItem>(item.getModelObject()));	
 							
-				item.add(new ItemLink("item", item));	
-							
-				if (item.getModelObject().isSelected(parentWebPage))
+				if(item.getModelObject() instanceof MenuItemAsPage)
 				{
-					item.add(AttributeAppender.replace("class", new Model<String>("active")));
-				}
-					
+					if (item.getModelObject().isSelected(parentWebPage))
+					{
+						item.add(AttributeAppender.replace("class", new Model<String>("active")));
+					}
+				}		
+				
+				if(item.getModelObject() instanceof MenuItemAsDropDown)
+				{				
+					item.add(AttributeAppender.replace("class", new Model<String>("dropdown")));
+				}	
+				
+				item.add(item.getModelObject().getComponent("item", item.getModelObject()));
 			}
 		};
 		add(menuLinks);
 
 	}
 		
-	/**
-	 * Creates a new link to be added to the menu
-	 * 
-	 * @param menu
-	 *            the menu to add the link to
-	 * @return the link
-	 */
-	private Component link(final ListItem<MenuItem> item)
-	{
-		return new Link<Class<? extends WebPage>>("pageLink", new Model<Class<? extends WebPage>>(item.getModelObject().getPage()))
-		{
-			{
-				final Label label = new Label("linkName", item.getModelObject().getTitle());
-				add(label);
-				label.setRenderBodyOnly(true);
-				
-				if (item.getModelObject().isSelected(parentWebPage))
-				{
-					item.add(AttributeAppender.replace("class", new Model<String>("active")));
-				}
-			}
-		
-			@Override
-			public void onClick()
-			{
-				setResponsePage(getModelObject());
-			}
-		};
-	}
-	
-	
-	
 	
 	@Override
 	protected void onComponentTag(ComponentTag tag) 
