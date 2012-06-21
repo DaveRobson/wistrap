@@ -31,11 +31,8 @@ public class ItemDropDown extends Panel
 		ListView<MenuItem> dropdownChildren = new ListView<MenuItem>("dropdownChildren", childItems)
 		{
 			protected void populateItem(final ListItem<MenuItem> childItem)
-			{
-				ItemAction component = (ItemAction) childItem.getModelObject().getComponent("childItem", childItem.getModelObject());
-				
-				
-				childItem.add(component);
+			{						
+				childItem.add(childItem.getModelObject().getComponent("childItem", childItem.getModelObject()));
 			}
 		};
 		add(dropdownChildren);

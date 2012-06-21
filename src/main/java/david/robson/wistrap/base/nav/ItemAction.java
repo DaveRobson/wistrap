@@ -12,7 +12,7 @@ public abstract class ItemAction extends Panel
 	{
 		super(id);
 		
-		//setRenderBodyOnly(true);
+		setRenderBodyOnly(true);
 				
 		add(new Link<Void>("itemLink")
 		{
