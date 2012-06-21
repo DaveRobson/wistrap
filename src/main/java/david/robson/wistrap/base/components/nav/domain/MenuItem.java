@@ -1,4 +1,4 @@
-package david.robson.wistrap.base.nav;
+package david.robson.wistrap.base.components.nav.domain;
 
 import java.util.List;
 
@@ -58,7 +58,7 @@ public abstract class MenuItem extends CommonDomainBase
 		}
 	}
 	
-	abstract Component getComponent(String id, MenuItem item);
+	public abstract Component getComponent(String id, MenuItem item);
 	
 	public String getTitle() {
 		return title;

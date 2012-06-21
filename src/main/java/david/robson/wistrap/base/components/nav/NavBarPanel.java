@@ -1,8 +1,7 @@
-package david.robson.wistrap.base.nav;
+package david.robson.wistrap.base.components.nav;
 
 import java.util.List;
 
-import org.apache.wicket.Component;
 import org.apache.wicket.behavior.AttributeAppender;
 import org.apache.wicket.markup.ComponentTag;
 import org.apache.wicket.markup.html.WebPage;
@@ -13,6 +12,10 @@ import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.Model;
+
+import david.robson.wistrap.base.components.nav.domain.MenuItem;
+import david.robson.wistrap.base.components.nav.domain.MenuItemAsDropDown;
+import david.robson.wistrap.base.components.nav.domain.MenuItemAsPage;
 
 
 @SuppressWarnings("serial")

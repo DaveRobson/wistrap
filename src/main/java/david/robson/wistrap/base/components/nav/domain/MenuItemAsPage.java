@@ -1,7 +1,9 @@
-package david.robson.wistrap.base.nav;
+package david.robson.wistrap.base.components.nav.domain;
 
 import org.apache.wicket.Component;
 import org.apache.wicket.markup.html.WebPage;
+
+import david.robson.wistrap.base.components.nav.ItemPageLink;
 
 @SuppressWarnings("serial")
 public class MenuItemAsPage extends MenuItem
@@ -14,7 +16,7 @@ public class MenuItemAsPage extends MenuItem
 	}
 
 	@Override
-	Component getComponent(String id, MenuItem item)
+	public Component getComponent(String id, MenuItem item)
 	{
 		return new ItemPageLink(id, item);
 	}

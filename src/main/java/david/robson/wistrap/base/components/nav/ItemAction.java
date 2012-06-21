@@ -1,9 +1,10 @@
-package david.robson.wistrap.base.nav;
+package david.robson.wistrap.base.components.nav;
 
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.form.FormComponentPanel;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
+
+import david.robson.wistrap.base.components.nav.domain.MenuItem;
 
 @SuppressWarnings("serial")
 public abstract class ItemAction extends Panel

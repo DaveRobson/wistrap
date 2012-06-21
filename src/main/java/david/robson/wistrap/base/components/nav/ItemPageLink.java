@@ -1,11 +1,12 @@
-package david.robson.wistrap.base.nav;
+package david.robson.wistrap.base.components.nav;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
-import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
+
+import david.robson.wistrap.base.components.nav.domain.MenuItem;
 
 /**
  * Creates a new link to be added to the menu

@@ -5,11 +5,11 @@ import java.util.List;
 
 import david.robson.wistrap.app.components.ComponentsPage;
 import david.robson.wistrap.app.home.HomePage;
-import david.robson.wistrap.base.nav.MenuItem;
-import david.robson.wistrap.base.nav.MenuItemAsAction;
-import david.robson.wistrap.base.nav.MenuItemAsDropDown;
-import david.robson.wistrap.base.nav.MenuItemAsPage;
-import david.robson.wistrap.base.nav.NavBarPanel;
+import david.robson.wistrap.base.components.nav.NavBarPanel;
+import david.robson.wistrap.base.components.nav.domain.MenuItem;
+import david.robson.wistrap.base.components.nav.domain.MenuItemAsAction;
+import david.robson.wistrap.base.components.nav.domain.MenuItemAsDropDown;
+import david.robson.wistrap.base.components.nav.domain.MenuItemAsPage;
 import david.robson.wistrap.base.webpage.DocsPage;
 
 
@@ -30,7 +30,7 @@ public class BasePage extends DocsPage
 				@Override
 				public void onClick() 
 				{
-					// TODO Auto-generated method stub
+					
 					
 				}
 				

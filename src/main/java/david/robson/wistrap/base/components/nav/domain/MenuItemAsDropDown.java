@@ -1,8 +1,10 @@
-package david.robson.wistrap.base.nav;
+package david.robson.wistrap.base.components.nav.domain;
 
 import java.util.List;
 
 import org.apache.wicket.Component;
+
+import david.robson.wistrap.base.components.nav.ItemDropDown;
 
 @SuppressWarnings("serial")
 public class MenuItemAsDropDown extends MenuItem
@@ -13,7 +15,7 @@ public class MenuItemAsDropDown extends MenuItem
 	}
 
 	@Override
-	Component getComponent(String id, MenuItem item) 
+	public Component getComponent(String id, MenuItem item) 
 	{
 		return new ItemDropDown(id, item);
 	}

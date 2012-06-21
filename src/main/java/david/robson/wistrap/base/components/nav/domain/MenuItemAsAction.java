@@ -1,6 +1,8 @@
-package david.robson.wistrap.base.nav;
+package david.robson.wistrap.base.components.nav.domain;
 
 import org.apache.wicket.Component;
+
+import david.robson.wistrap.base.components.nav.ItemAction;
 
 
 
@@ -13,7 +15,7 @@ public abstract class MenuItemAsAction extends MenuItem
 	}
 	
 	@Override
-	Component getComponent(String id, MenuItem item) 
+	public Component getComponent(String id, MenuItem item) 
 	{
 		return new ItemAction(id, item)
 		{
