@@ -5,6 +5,7 @@ import java.util.List;
 
 import david.robson.wistrap.app.components.ComponentsPage;
 import david.robson.wistrap.app.home.HomePage;
+import david.robson.wistrap.app.plugins.PluginsPage;
 import david.robson.wistrap.base.components.nav.NavBarPanel;
 import david.robson.wistrap.base.components.nav.domain.MenuItem;
 import david.robson.wistrap.base.components.nav.domain.MenuItemAsAction;
@@ -21,7 +22,7 @@ public class BasePage extends DocsPage
 		List<MenuItem> items = new ArrayList<MenuItem>();
 		items.add(new MenuItemAsPage(HomePage.class, "Home", "homePage"));
 		items.add(new MenuItemAsPage(ComponentsPage.class, "Components", "componentsPage"));
-		
+		items.add(new MenuItemAsPage(PluginsPage.class, "Plugins", "pluginsPage"));
 		
 		
 			List<MenuItem> childItems = new ArrayList<MenuItem>();
